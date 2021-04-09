@@ -1,0 +1,61 @@
+\documentclass[t,% Place text of slides at the (vertical) top of the slides
+11pt,% Standard font size
+aspectratio=169% Aspect ratio 16:9 (widescreen)
+]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{seagull}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{}
+% \setbeamercolor{math text}{fg=blue}
+
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+
+\usepackage{tikz}
+
+\usepackage{graphicx}
+\setkeys{Gin}{keepaspectratio,%
+width=\textwidth,%
+height=0.85\textheight}
+
+\usepackage{lmodern}
+\usepackage{inconsolata}
+
+\usepackage{siunitx}
+\sisetup{locale = FR}
+\DeclareSIUnit{\mc}{\cubic\meter}
+
+\title{Cálculo 1}
+\author{Rodrigo de Farias Gomes}
+\date{Período 2020.1}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+
+\tableofcontents
+    
+\end{frame}
+
+\section{Primeira Seção}
+
+\begin{frame}{Assunto da primeira seção}
+    Qualquer coisa \SI{3}{\mc}
+\end{frame}
+
+\section{Segunda Seção}
+
+\begin{frame}{Assunto da segunda seção}
+    Qualquer coisa
+\end{frame}
+
+\end{document}
