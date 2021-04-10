@@ -16,11 +16,12 @@ aspectratio=169% Aspect ratio 16:9 (widescreen)
 \usepackage{hyperref}
 
 \usepackage{tikz}
+\usepackage{adjustbox}
 
 \usepackage{graphicx}
 \setkeys{Gin}{keepaspectratio}
 
-%\setbeamertemplate{background}[grid][step=0.1\textheight]
+%\setbeamertemplate{background}[grid][step=1cm, color=red]
 
 \usepackage{lmodern}
 \usepackage{inconsolata}
@@ -46,23 +47,94 @@ aspectratio=169% Aspect ratio 16:9 (widescreen)
     
 \end{frame}
 
-\section{Primeira Seção}
+\section{Unidades SI}
 
-\begin{frame}{Assunto da primeira seção}
+\begin{frame}{Unidades SI}
     \begin{itemize}
         \item Testando unidades SI: \SI{3}{\mc}
     \end{itemize}
 \end{frame}
 
-\section{Segunda Seção}
+\section{Imagens}
 
 
-\begin{frame}{Assunto da segunda seção}
+\begin{frame}{Tamanho da imagem usando \textit{grid}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum nibh tellus molestie nunc non blandit massa. Adipiscing at in tellus integer feugiat scelerisque. Praesent tristique magna sit amet purus. Tellus rutrum tellus pellentesque eu. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Velit euismod in pellentesque massa placerat duis. Elementum integer enim neque volutpat ac. Pellentesque massa placerat duis ultricies. Sed enim ut sem viverra aliquet eget.
 
 \centering
 \includegraphics[height=0.5\textheight]{image1.png}
 \end{frame}
+
+\section{Tikz}
+
+\begin{frame}{Dica}
+\begin{columns}
+
+\begin{column}[t]{0.38\textwidth}
+
+\begin{tikzpicture}[>=stealth]
+
+%     \node[anchor=south west,inner sep=0, opacity=1] (image) at (0,0)
+% {\includegraphics[height=0.75\textheight]{teste.png}};
+%     \draw[help lines,xstep=0.1,ystep=0.1] (image.south east) grid (image.north west);
+    \coordinate (A) at (0.35,0.56);
+    \coordinate (B) at (2.19,0.56);
+    \coordinate (C) at (1.3,4.75);
+    \coordinate (D) at (3.14,4.75);
+    \coordinate (E) at (2.65,5.75);
+    \coordinate (F) at (4.49,5.75);
+    \coordinate (G) at (3.55,1.55);
+    \coordinate (H) at (1.71,1.55);
+    \draw [thick] (A) -- (B);
+    \draw [thick] (B) -- (G);
+    \draw [thick] (H) -- (G);
+    \draw [thick] (H) -- (A);
+    \draw [thick] (C) -- (D);
+    \draw [very thick, ->, red] (F) -- (D);
+    \draw [very thick, ->, blue] (E) -- (F);
+    \draw [thick] (E) -- (C);
+    \draw [thick] (A) -- (C);
+    \draw [thick] (D) -- (B);
+    \draw [very thick, ->, blue] (H) -- (E);
+    \draw [thick] (F) -- (G);
+    \node [below left]  at (A) {A};
+    \node [below right] at (B) {B};
+    \node [above left]  at (C) {C};
+    \node [above left]  at (D) {D};
+    \node [above left]  at (E) {E};
+    \node [above left]  at (F) {F};
+    \node [above left]  at (G) {G};
+    \node [above left]  at (H) {H};
+    
+    \draw[very thick, ->, red] (H) -- (D);
+\end{tikzpicture}
+
+
+\end{column}
+
+\begin{column}[t]{0.62\textwidth}
+\begin{itemize}
+    \item Sejam os vetores \(\vec{AC}\), \(\vec{HG}\) e \(\vec{FD}\)
+    \item Temos que \(\vec{HG}=\vec{EF}\) (mesma direção, tamanho e sentido)
+    \item Temos que \(\vec{AC}=\vec{HE}\) (mesma direção, tamanho e sentido)
+    \item Ou seja, podemos trocar \(\vec{AC}\) por \(\vec{HE}\) e \(\vec{HG}\) por \(\vec{EF}\)
+    \item \textbf{Ou seja}: 
+    \[
+    \vec{AC}+\vec{HG}+\vec{FD} = \vec{HE}+\vec{EF}+\vec{FD}
+    \]
+    \item Finalmente, temos o vetor \(\vec{HD}\), que está \textit{implorando} para ser o resultado de algo (talvez uma soma...)
+\end{itemize}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Usando Geogebra para tikz}
+
+Em desenvolvimento
+
+\end{frame}
+
 
 \end{document}
