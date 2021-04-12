@@ -4,7 +4,7 @@ aspectratio=169% Aspect ratio 16:9 (widescreen)
 ]{beamer}
 
 \usetheme{Boadilla}
-\usecolortheme{seagull}
+%\usecolortheme{seagull}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{frametitle continuation}{}
 % \setbeamercolor{math text}{fg=blue}
@@ -16,7 +16,7 @@ aspectratio=169% Aspect ratio 16:9 (widescreen)
 \usepackage{hyperref}
 
 \usepackage{tikz}
-\usepackage{adjustbox}
+\usetikzlibrary{calc,matrix}
 
 \usepackage{graphicx}
 \setkeys{Gin}{keepaspectratio}
@@ -28,7 +28,9 @@ aspectratio=169% Aspect ratio 16:9 (widescreen)
 
 \usepackage{siunitx}
 \sisetup{locale = FR}
+
 \DeclareSIUnit{\mc}{\cubic\meter}
+\DeclareMathOperator{\sen}{sen}
 
 \title{Cálculo 1}
 \author{Rodrigo de Farias Gomes}
@@ -135,6 +137,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Em desenvolvimento
 
 \end{frame}
+
 
 
 \end{document}
